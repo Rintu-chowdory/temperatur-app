@@ -1,0 +1,6 @@
+{
+  "appId": "de.rintu.temperatur",
+  "appName": "Temperatur",
+  "webDir": "dist",
+  "android": { "allowMixedContent": false }
+}

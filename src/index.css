@@ -1,0 +1,61 @@
+:root {
+  --bg: #0b1220;
+  --card: #131c30;
+  --card2: #0f1729;
+  --border: #22304d;
+  --text: #e8edf5;
+  --muted: #7d8ba3;
+  --indoor: #f59e0b;
+  --outdoor: #38bdf8;
+  --good: #34d399;
+  --bad: #f87171;
+}
+body { background: var(--bg); color: var(--text); }
+.app { max-width: 480px; margin: 0 auto; padding: 20px 16px 40px; }
+.header { text-align: center; margin-bottom: 24px; }
+.header h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+.header .updated { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.cards { display: flex; flex-direction: column; gap: 16px; }
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 20px 20px 24px; position: relative; overflow: hidden;
+}
+.card .label { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--muted); }
+.card .label .dot { width: 8px; height: 8px; border-radius: 50%; }
+.card.indoor .dot { background: var(--indoor); }
+.card.outdoor .dot { background: var(--outdoor); }
+.card .value { display: flex; align-items: baseline; gap: 4px; margin-top: 12px; }
+.card .value .num { font-size: 64px; font-weight: 800; letter-spacing: -2px; line-height: 1; }
+.card .value .unit { font-size: 24px; color: var(--muted); font-weight: 600; }
+.card .sub { margin-top: 10px; font-size: 13px; color: var(--muted); min-height: 18px; }
+.card .badge { position: absolute; top: 16px; right: 16px; font-size: 11px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+.card .badge.live { color: var(--good); border-color: rgba(52,211,153,0.4); }
+.manual { margin-top: 14px; display: flex; gap: 8px; }
+.manual input {
+  flex: 1; background: var(--card2); border: 1px solid var(--border); border-radius: 12px;
+  color: var(--text); padding: 10px 14px; font-size: 16px; outline: none; width: 100%;
+}
+.manual input:focus { border-color: var(--indoor); }
+.manual button, .btn {
+  border: none; border-radius: 12px; padding: 10px 16px; font-size: 14px; font-weight: 600;
+  background: #1d2a47; color: var(--text); cursor: pointer;
+}
+.manual button:active, .btn:active { transform: scale(0.97); }
+.settings { margin-top: 24px; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 18px; }
+.settings h2 { font-size: 15px; margin-bottom: 4px; }
+.settings p.desc { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+.settings label { display: block; font-size: 12px; color: var(--muted); margin: 10px 0 4px; }
+.settings input {
+  background: var(--card2); border: 1px solid var(--border); border-radius: 12px;
+  color: var(--text); padding: 10px 14px; font-size: 14px; outline: none; width: 100%;
+}
+.settings input:focus { border-color: var(--outdoor); }
+.settings .row { display: flex; gap: 8px; align-items: stretch; }
+.settings .btn.save { margin-top: 14px; background: #1d4ed8; }
+.settings .status { margin-top: 10px; font-size: 12px; }
+.settings .status.ok { color: var(--good); }
+.settings .status.err { color: var(--bad); }
+.settings details { margin-top: 14px; font-size: 12px; color: var(--muted); }
+.settings details summary { cursor: pointer; }
+.settings details p { margin-top: 8px; line-height: 1.5; }
+.settings details a { color: var(--outdoor); }

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Temperatur</string>
+    <string name="title_activity_main">Temperatur</string>
+    <string name="package_name">de.rintu.temperatur</string>
+    <string name="custom_url_scheme">de.rintu.temperatur</string>
+</resources>
